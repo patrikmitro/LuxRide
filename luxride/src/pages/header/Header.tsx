@@ -1,5 +1,5 @@
 import React from "react";
-import Text from "../../components/text/Text";
+
 // styled components
 import {
   Nav,
@@ -20,8 +20,6 @@ import NavList from "./navmenu/NavList";
 import NavLogo from "./navlogo/NavLogo";
 import NavForm from "./navform/NavForm";
 import NavPhoneNumber from "./navphonenumber/NavPhoneNumber";
-//images
-import Call from "../../assets/images/Call.png";
 
 const Navbar = () => {
   return (

@@ -1,6 +1,9 @@
 import React from "react";
+
+//Styled components
 import { Wrapper } from "./Footer.styles";
-const Footer: React.FC = () => {
+
+const Footer = () => {
   return (
     <footer>
       <Wrapper>This is curtcow</Wrapper>

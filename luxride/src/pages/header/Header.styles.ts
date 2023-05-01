@@ -26,15 +26,6 @@ export const NavbarContainer = styled.div`
   padding: 0 16px;
 `;
 
-export const Button = styled.button<Props>`
-  border-radius: 40px;
-  padding: 10px 16px;
-
-  background: ${({ Backgroundcolor }) => Backgroundcolor};
-  border: none;
-  cursor: pointer;
-`;
-
 export const FormWrapper = styled.div`
   display: flex;
   gap: 10px;

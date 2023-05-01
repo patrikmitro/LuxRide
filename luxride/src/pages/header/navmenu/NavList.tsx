@@ -8,30 +8,20 @@ interface Props {
   children: React.ReactNode;
 }
 
-const StyledLi = styled.li`
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-  padding: 10px 16px;
-  border-radius: 40px;
-  &:hover {
-    background-color: ${Theme.colors.grey};
-  }
-  cursor: pointer;
-`;
 const Image = styled.img`
   align-self: center;
   cursor: pointer;
 `;
 const UnorderedList = styled.ul`
   display: flex;
+  padding-left: 32px;
 `;
 const List = styled.li`
   display: flex;
   gap: 8px;
   padding: 8px 16px;
   border-radius: 40px;
+  cursor: pointer;
   &:hover {
     background-color: ${Theme.colors.grey};
   }
