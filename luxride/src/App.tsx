@@ -1,10 +1,10 @@
 import React from "react";
 
 // components
-import Navbar from "./pages/navbar/Navbar";
+import Navbar from "./pages/header/Header";
 import Footer from "./pages/footer/Footer";
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <>
       <Navbar />

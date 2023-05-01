@@ -5,7 +5,7 @@ export const Theme = {
     yellow: "#EFFC53",
     green: "#22C58B",
     main: "#393938",
-    grey: "#626262",
+    grey: "#333333",
     white: "#FFFFFF",
   },
 };
