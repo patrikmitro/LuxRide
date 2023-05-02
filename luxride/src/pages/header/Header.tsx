@@ -40,7 +40,7 @@ const Navbar = () => {
     };
   }, []);
   const toggleOpen = () => {
-    setIsOpened((isOpened) => !isOpened);
+    setIsOpened((prevState) => !prevState);
   };
   return (
     <Nav Backgroundcolor={Theme.colors.black}>
