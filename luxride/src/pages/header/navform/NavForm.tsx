@@ -6,7 +6,7 @@ import Text from "../../../components/text/Text";
 interface Props {
   Backgroundcolor: string;
 }
-const Button = styled.button<Props>`
+const Button = styled.a<Props>`
   border-radius: 40px;
   padding: 10px 16px;
 

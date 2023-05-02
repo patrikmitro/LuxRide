@@ -41,3 +41,5 @@ export const NavMenuWrapper = styled.div``;
 export const LogoWrapper = styled.div``;
 
 export const UlWrapper = styled.div``;
+
+export const BurgerWrapper = styled.div``;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // styled components
 import {
@@ -10,6 +10,7 @@ import {
   NavMenuWrapper,
   LogoWrapper,
   UlWrapper,
+  BurgerWrapper,
 } from "./Header.styles";
 
 //colors
@@ -20,8 +21,27 @@ import NavList from "./navmenu/NavList";
 import NavLogo from "./navlogo/NavLogo";
 import NavForm from "./navform/NavForm";
 import NavPhoneNumber from "./navphonenumber/NavPhoneNumber";
+import NavBurger from "./mobileview/navburger/NavBurger";
 
 const Navbar = () => {
+  const [isOpened, setIsOpened] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 1000) {
+        setIsOpened(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  const toggleOpen = () => {
+    setIsOpened((isOpened) => !isOpened);
+  };
   return (
     <Nav Backgroundcolor={Theme.colors.black}>
       <NavbarContainer>
@@ -31,7 +51,7 @@ const Navbar = () => {
           </LogoWrapper>
           <NavMenuWrapper>
             <UlWrapper>
-              <NavList />
+              <NavList isOpened={isOpened} />
             </UlWrapper>
           </NavMenuWrapper>
         </LogoNavMenuWrapper>
@@ -42,6 +62,9 @@ const Navbar = () => {
           <FormWrapper>
             <NavForm />
           </FormWrapper>
+          <BurgerWrapper>
+            <NavBurger isOpened={isOpened} onClick={toggleOpen} />
+          </BurgerWrapper>
         </Wrapper>
       </NavbarContainer>
     </Nav>

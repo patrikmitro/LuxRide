@@ -8,14 +8,22 @@ const Image = styled.img`
   cursor: pointer;
 `;
 
+const PhoneWrapper = styled.div`
+  display: flex;
+  gap: 6px;
+  @media only screen and (max-width: 1100px) {
+    display: none;
+  }
+`;
+
 const NavPhoneNumber = () => {
   return (
-    <>
+    <PhoneWrapper>
       <Image src={Call} alt="phone number" />
       <Text fontColor={Theme.colors.white} fontSize="14px" fontWeight="500">
         +42 2323 2323
       </Text>
-    </>
+    </PhoneWrapper>
   );
 };
 
