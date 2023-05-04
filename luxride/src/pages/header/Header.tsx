@@ -25,11 +25,13 @@ import NavBurger from "./mobileview/navburger/NavBurger";
 
 const Navbar = () => {
   const [isOpened, setIsOpened] = useState(false);
-
+  const [isScreenWidth, setIsScreenWidth] = useState(false);
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 1000) {
-        setIsOpened(false);
+      if (window.innerWidth > 1100) {
+        setIsScreenWidth(false);
+      } else {
+        setIsScreenWidth(true);
       }
     };
 
@@ -38,7 +40,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  });
   const toggleOpen = () => {
     setIsOpened((prevState) => !prevState);
   };
@@ -51,7 +53,7 @@ const Navbar = () => {
           </LogoWrapper>
           <NavMenuWrapper>
             <UlWrapper>
-              <NavList isOpened={isOpened} />
+              <NavList isOpened={isOpened} screenWidth={isScreenWidth} />
             </UlWrapper>
           </NavMenuWrapper>
         </LogoNavMenuWrapper>
