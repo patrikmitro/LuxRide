@@ -11,3 +11,11 @@ button {
   font-family: inherit;
   font-size: inherit;
 }
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+}
