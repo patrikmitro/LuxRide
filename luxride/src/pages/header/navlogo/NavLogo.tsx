@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import Logo from "../../../assets/brand/Logo.png";
 import styled from "styled-components";
 const Image = styled.img`
@@ -8,7 +8,11 @@ const Image = styled.img`
   width: 120px;
 `;
 const NavLogo = () => {
-  return <Image src={Logo} alt="logo" />;
+  return (
+    <Link to="/">
+      <Image src={Logo} alt="logo" />
+    </Link>
+  );
 };
 
 export default NavLogo;
