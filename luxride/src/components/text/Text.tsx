@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 import styled from "styled-components";
 
 interface TextProps {
@@ -6,6 +6,7 @@ interface TextProps {
   fontWeight: string;
   fontSize: string;
   fontColor: string;
+  onClick?: () => void;
 }
 
 const Span = styled.span<TextProps>`
@@ -14,7 +15,7 @@ const Span = styled.span<TextProps>`
   color: ${({ fontColor }) => fontColor};
 `;
 
-const Text: FC<TextProps> = ({ children, fontWeight, fontSize, fontColor }) => {
+const Text = ({ children, fontWeight, fontSize, fontColor }: TextProps) => {
   return (
     <Span fontWeight={fontWeight} fontSize={fontSize} fontColor={fontColor}>
       {children}
