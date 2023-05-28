@@ -18,9 +18,9 @@ import { Theme } from "../../styles/theme.styles";
 
 //components
 import NavList from "./navmenu/NavList";
-import NavLogo from "./navlogo/NavLogo";
+import Logo from "../../components/Logo";
 import NavForm from "./navform/NavForm";
-import NavPhoneNumber from "./navphonenumber/NavPhoneNumber";
+import PhoneNumber from "../../components/PhoneNumber";
 import NavBurger from "./mobileview/navburger/NavBurger";
 
 const Navbar = () => {
@@ -49,7 +49,7 @@ const Navbar = () => {
       <NavbarContainer>
         <LogoNavMenuWrapper>
           <LogoWrapper>
-            <NavLogo />
+            <Logo />
           </LogoWrapper>
           <NavMenuWrapper>
             <UlWrapper>
@@ -63,7 +63,7 @@ const Navbar = () => {
         </LogoNavMenuWrapper>
         <Wrapper>
           <Wrapper>
-            <NavPhoneNumber />
+            <PhoneNumber />
           </Wrapper>
           <FormWrapper>
             <NavForm />
