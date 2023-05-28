@@ -5,10 +5,9 @@ interface Props {
 }
 
 export const StyledFooter = styled.footer<Props>`
-  height: 600px;
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  height: auto;
+  position: relative;
+
   width: 100%;
   background-color: ${({ BackgroundColor }) => BackgroundColor};
   color: white;
@@ -18,11 +17,25 @@ export const FooterWrapper = styled.div`
   max-width: 1170px;
   padding: 24px 12px;
   margin: auto;
+  @media only screen and (max-width: 920px) {
+    padding: 24px 32px;
+  }
 `;
 
 export const TopContainer = styled.div`
   display: flex;
   justify-content: space-between;
+`;
+export const TopWrapper = styled.div<Props>`
+  ::after {
+    display: block;
+    margin: 16px 0 32px 0;
+    width: 100%;
+    border-radius: 16px;
+    height: 2px;
+    background-color: ${({ BackgroundColor }) => BackgroundColor};
+    content: "";
+  }
 `;
 export const LogoContactContainer = styled.div`
   display: flex;
@@ -33,6 +46,17 @@ export const LogoContactContainer = styled.div`
   }
 `;
 export const FollowUsContainer = styled.div``;
-
+export const MiddleWrapper = styled.div<Props>`
+  ::after {
+    display: block;
+    margin: 16px 0 32px 0;
+    width: 100%;
+    border-radius: 16px;
+    height: 2px;
+    background-color: ${({ BackgroundColor }) => BackgroundColor};
+    content: "";
+  }
+`;
 export const MiddleContainer = styled.div``;
 export const BottomContainer = styled.div``;
+export const BottomWrapper = styled.div``;

@@ -6,6 +6,7 @@ import Call from "../assets/images/Call.png";
 
 interface PhoneNumberProps {
   isFooter?: boolean;
+  fontSize: string;
 }
 
 const Image = styled.img`
@@ -24,11 +25,11 @@ const PhoneWrapper = styled.div<PhoneNumberProps>`
   }`}
 `;
 
-const PhoneNumber = ({ isFooter }: PhoneNumberProps) => {
+const PhoneNumber = ({ isFooter, fontSize }: PhoneNumberProps) => {
   return (
-    <PhoneWrapper isFooter={isFooter}>
+    <PhoneWrapper isFooter={isFooter} fontSize="">
       <Image src={Call} alt="phone number" />
-      <Text fontColor={Theme.colors.white} fontSize="14px" fontWeight="500">
+      <Text fontColor={Theme.colors.white} fontSize={fontSize} fontWeight="500">
         +42 2323 2323
       </Text>
     </PhoneWrapper>

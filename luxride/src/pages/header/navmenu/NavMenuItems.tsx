@@ -44,25 +44,10 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const Image = styled.img`
-  align-self: center;
-  cursor: pointer;
-`;
-
 const NavMenuItems = ({ url, title, screenWidth, submenu, onClick }: Props) => {
-  const [showDropDown, setShowDropDown] = useState(false);
-
-  const handleMouseEnter = () => {
-    setShowDropDown(true);
-  };
-
-  const handleMouseLeave = () => {
-    setShowDropDown(false);
-  };
-
   return (
-    <List onMouseLeave={handleMouseLeave}>
-      <StyledLink to={url} onMouseEnter={handleMouseEnter}>
+    <List>
+      <StyledLink to={url}>
         <Text
           fontColor={screenWidth ? Theme.colors.black : Theme.colors.white}
           fontSize={screenWidth ? "24px" : "14px"}
@@ -70,12 +55,7 @@ const NavMenuItems = ({ url, title, screenWidth, submenu, onClick }: Props) => {
         >
           {title}
         </Text>
-        <Image
-          src={screenWidth ? DownArrowBlack : DownArrow}
-          alt="down arrow"
-        />
       </StyledLink>
-      {showDropDown && <NavMenuDropDown onClick={onClick} submenu={submenu} />}
     </List>
   );
 };

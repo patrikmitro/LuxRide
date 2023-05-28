@@ -1,12 +1,10 @@
 export const menuItems: {
   title: string;
   url: string;
-  submenu?: { title: string; url: string }[];
 }[] = [
   {
     title: "About",
     url: "/about",
-    submenu: [{ title: "About", url: "/About" }],
   },
   {
     title: "Services",

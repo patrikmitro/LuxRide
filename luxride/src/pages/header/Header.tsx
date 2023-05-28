@@ -63,7 +63,7 @@ const Navbar = () => {
         </LogoNavMenuWrapper>
         <Wrapper>
           <Wrapper>
-            <PhoneNumber />
+            <PhoneNumber fontSize="14px" />
           </Wrapper>
           <FormWrapper>
             <NavForm />

@@ -9,6 +9,7 @@ interface ImageProps {
   width: string;
   padding?: string;
   height?: string;
+  onClick?: () => void;
 }
 
 const StyledImage = styled.img<ImageProps>`
@@ -18,10 +19,19 @@ const StyledImage = styled.img<ImageProps>`
   padding: ${({ padding }) => padding};
   height: ${({ height }) => height};
 `;
-const ActionImage = ({ to, src, alt, width, padding, height }: ImageProps) => {
+const ActionImage = ({
+  to,
+  src,
+  alt,
+  width,
+  padding,
+  height,
+  onClick,
+}: ImageProps) => {
   return (
     <Link to={to}>
       <StyledImage
+        onClick={onClick}
         src={src}
         alt={alt}
         to={to}
