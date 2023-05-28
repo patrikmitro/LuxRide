@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 
 // styled components
 import {
-  Nav,
   Wrapper,
   NavbarContainer,
   FormWrapper,
@@ -11,6 +10,7 @@ import {
   LogoWrapper,
   UlWrapper,
   BurgerWrapper,
+  StyledHeader,
 } from "./Header.styles";
 
 //colors
@@ -28,7 +28,7 @@ const Navbar = () => {
   const [isScreenWidth, setIsScreenWidth] = useState(false);
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 1100) {
+      if (window.innerWidth > 920) {
         setIsScreenWidth(false);
       } else {
         setIsScreenWidth(true);
@@ -45,7 +45,7 @@ const Navbar = () => {
     setIsOpened((prevState) => !prevState);
   };
   return (
-    <Nav Backgroundcolor={Theme.colors.black}>
+    <StyledHeader Backgroundcolor={Theme.colors.black}>
       <NavbarContainer>
         <LogoNavMenuWrapper>
           <LogoWrapper>
@@ -53,7 +53,11 @@ const Navbar = () => {
           </LogoWrapper>
           <NavMenuWrapper>
             <UlWrapper>
-              <NavList isOpened={isOpened} screenWidth={isScreenWidth} />
+              <NavList
+                isOpened={isOpened}
+                screenWidth={isScreenWidth}
+                onClick={toggleOpen}
+              />
             </UlWrapper>
           </NavMenuWrapper>
         </LogoNavMenuWrapper>
@@ -69,7 +73,7 @@ const Navbar = () => {
           </BurgerWrapper>
         </Wrapper>
       </NavbarContainer>
-    </Nav>
+    </StyledHeader>
   );
 };
 

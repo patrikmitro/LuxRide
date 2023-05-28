@@ -1,23 +1,23 @@
-import React, { FC } from "react";
+import React from "react";
 import styled, { css } from "styled-components";
 
 import { menuItems } from "./navmenudata/navMenuItemsData";
 
-import Text from "../../../components/text/Text";
 import { Theme } from "../../../styles/theme.styles";
 import NavMenuItems from "./NavMenuItems";
 interface Props {
   isOpened: boolean;
   screenWidth: boolean;
+  onClick: () => void;
 }
 const UnorderedList = styled.ul`
   display: flex;
   padding-left: 32px;
 
-  @media only screen and (max-width: 1100px) {
+  @media only screen and (max-width: 920px) {
     flex-direction: column;
 
-    li {
+    a {
       &:hover {
         background-color: transparent;
       }
@@ -26,7 +26,7 @@ const UnorderedList = styled.ul`
 `;
 
 const NavMenuWrapper = styled.div<Props>`
-  @media only screen and (max-width: 1100px) {
+  @media only screen and (max-width: 920px) {
     position: fixed;
     transition: transform 0.5s ease-in-out;
     top: 80px;
@@ -46,9 +46,13 @@ const NavMenuWrapper = styled.div<Props>`
     flex-direction: column;
   }
 `;
-const NavList = ({ isOpened, screenWidth }: Props) => {
+const NavList = ({ isOpened, screenWidth, onClick }: Props) => {
   return (
-    <NavMenuWrapper isOpened={isOpened} screenWidth={screenWidth}>
+    <NavMenuWrapper
+      isOpened={isOpened}
+      screenWidth={screenWidth}
+      onClick={onClick}
+    >
       {" "}
       {/* NEchapem tomu */}
       <UnorderedList>
@@ -56,6 +60,7 @@ const NavList = ({ isOpened, screenWidth }: Props) => {
           (menu: { title: string; url: string }, index: number) => {
             return (
               <NavMenuItems
+                onClick={onClick}
                 key={index}
                 title={menu.title}
                 screenWidth={screenWidth}

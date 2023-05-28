@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 interface TextProps {
   children: React.ReactNode;
-  fontWeight: string;
-  fontSize: string;
-  fontColor: string;
+  fontWeight?: string;
+  fontSize?: string;
+  fontColor?: string;
   onClick?: () => void;
 }
 

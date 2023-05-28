@@ -4,7 +4,7 @@ interface Props {
   Backgroundcolor: string;
 }
 
-export const Nav = styled.nav<Props>`
+export const StyledHeader = styled.header<Props>`
   width: 100%;
   height: 80px;
   background-color: ${({ Backgroundcolor }) => Backgroundcolor};
@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
   gap: 16px;
 `;
 
-export const NavbarContainer = styled.div`
+export const NavbarContainer = styled.nav`
   height: 80px;
   display: flex;
   justify-content: space-between;

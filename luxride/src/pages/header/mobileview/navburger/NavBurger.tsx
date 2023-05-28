@@ -13,7 +13,7 @@ const Burger1 = styled.div`
   height: 2px;
   transition: all 0.5s;
   background-color: ${Theme.colors.white};
-  @media only screen and (max-width: 1100px) {
+  @media only screen and (max-width: 920px) {
     display: block;
   }
 `;
@@ -24,7 +24,7 @@ const Burger2 = styled.div`
   height: 2px;
   transition: all 0.5s;
   background-color: ${Theme.colors.white};
-  @media only screen and (max-width: 1100px) {
+  @media only screen and (max-width: 920px) {
     display: block;
   }
 `;

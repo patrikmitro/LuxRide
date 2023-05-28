@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 
 import Header from "./pages/header/Header";
+import Footer from "./pages/footer/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -15,6 +16,7 @@ root.render(
         <Route path="/" element={<h1>Main</h1>} />
         <Route path="/c" element={<h1>Yo</h1>} />
       </Routes>
+      <Footer />
     </Router>
   </React.StrictMode>
 );

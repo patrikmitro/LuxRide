@@ -1,15 +1,28 @@
-export const menuItems: { title: string; url: string }[] = [
+export const menuItems: {
+  title: string;
+  url: string;
+  submenu?: { title: string; url: string }[];
+}[] = [
   {
-    title: "Home",
-    url: "/c",
+    title: "About",
+    url: "/about",
+    submenu: [{ title: "About", url: "/About" }],
   },
   {
     title: "Services",
-    url: "/c",
+    url: "/services",
   },
   {
-    title: "About",
-    url: "/c",
+    title: "Our Fleet",
+    url: "/ourfleet",
+  },
+  {
+    title: "Contact",
+    url: "/contact",
+  },
+  {
+    title: "Blog",
+    url: "/blog",
   },
 ];
 
