@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Theme } from "../styles/theme.styles";
-import Text from "./text/Text";
+import { Text } from "./text/Text";
 import Call from "../assets/images/Call.png";
 
 interface PhoneNumberProps {

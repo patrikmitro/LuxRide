@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Text from "../../../components/text/Text";
+import { Text } from "../../../components/text/Text";
 import FacebookLogo from "../../../assets/images/FacebookLogo.png";
 import TwitterLogo from "../../../assets/images/TwitterLogo.png";
 import InLogo from "../../../assets/images/InLogo.png";

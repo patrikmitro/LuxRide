@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Theme } from "../../../styles/theme.styles";
-import Text from "../../../components/text/Text";
+import { Text } from "../../../components/text/Text";
 
 interface MenuItem {
   title: string;

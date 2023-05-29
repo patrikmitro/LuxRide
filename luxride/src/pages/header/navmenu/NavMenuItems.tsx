@@ -1,15 +1,11 @@
-import React, { MouseEventHandler, useState } from "react";
+import React from "react";
 import { NavLink as Link } from "react-router-dom";
 
 // styled-components
 import styled from "styled-components";
-// images
-import DownArrow from "../../../assets/images/DownArrow.png";
-import DownArrowBlack from "../../../assets/images/DownArrowBlack.png";
 
 // styled components
-import Text from "../../../components/text/Text";
-import NavMenuDropDown from "./NavMenuDropDown";
+import { Text } from "../../../components/text/Text";
 
 // colors
 import { Theme } from "../../../styles/theme.styles";

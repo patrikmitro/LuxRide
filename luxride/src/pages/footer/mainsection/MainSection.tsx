@@ -8,7 +8,7 @@ import {
   DownloadAppWrapper,
 } from "./MainSection.styles";
 import { mainSectionData } from "./mainsectiondata/mainSectionData";
-import Text from "../../../components/text/Text";
+import { Text } from "../../../components/text/Text";
 import { Theme } from "../../../styles/theme.styles";
 import DownloadAppButton from "./downloadapp/DownloadAppButton";
 import AppleLogo from "../../../assets/images/AppleLogo.png";

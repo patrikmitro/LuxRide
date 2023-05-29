@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Theme } from "../../../styles/theme.styles";
-import Text from "../../../components/text/Text";
+import { Text } from "../../../components/text/Text";
 
 interface Props {
   Backgroundcolor: string;
