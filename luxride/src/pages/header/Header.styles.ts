@@ -8,6 +8,12 @@ export const StyledHeader = styled.header<Props>`
   width: 100%;
   height: 80px;
   background-color: ${({ Backgroundcolor }) => Backgroundcolor};
+  @media only screen and (max-width: 920px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
 `;
 
 export const Wrapper = styled.div`
