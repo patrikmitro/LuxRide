@@ -26,25 +26,32 @@ const UnorderedList = styled.ul`
 `;
 
 const NavMenuWrapper = styled.div<Props>`
-  @media only screen and (max-width: 920px) {
-    position: fixed;
-    transition: transform 0.5s ease-in-out;
-    top: 80px;
-    z-index: 99;
-    left: 0;
-    ${(props) =>
-      props.isOpened
-        ? css`
-            transform: translate(0);
-          `
-        : css`
-            transform: translate(100%);
-          `}
-    width: 100%;
-    height: 100vh;
-    background-color: ${Theme.colors.white};
-    flex-direction: column;
+  ${(props) =>
+    props.screenWidth &&
+    `
+
+
+@media only screen and (max-width: 920px) {
+  position: fixed;
+  transition: transform 0.5s ease-in-out;
+  top: 80px;
+  z-index: 99;
+  left: 0;
+  ${
+    props.isOpened
+      ? css`
+          transform: translate(0);
+        `
+      : css`
+          transform: translate(100%);
+        `
   }
+  width: 100%;
+  height: 100vh;
+  background-color: ${Theme.colors.white};
+  flex-direction: column;
+}
+`}
 `;
 const NavList = ({ isOpened, screenWidth, onClick }: Props) => {
   return (
