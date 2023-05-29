@@ -5,18 +5,19 @@ import { Text } from "../../../components/text/Text";
 import Image from "../../../components/image/Image";
 import Title from "../../../components/text/Title";
 import {
-  MainWrapper,
   LandingPageWrapper,
   ImageWrapper,
   Overlay,
   HeadingWrapper,
+  LandingPageContainer,
 } from "../landingpage/LandingPage.styles";
 
 import LandingPageBackground from "../../../assets/images/MercedesBackGround.png";
+import CarRentaSearch from "./carrentalsearch/CarRentalSearch";
 const LandingPage = () => {
   return (
-    <MainWrapper>
-      <LandingPageWrapper backGroundImage={LandingPageBackground}>
+    <LandingPageWrapper backGroundImage={LandingPageBackground}>
+      <LandingPageContainer>
         <HeadingWrapper>
           <Text fontColor={Theme.colors.white} fontSize="16px">
             Where Would You Like To Go?
@@ -31,9 +32,11 @@ const LandingPage = () => {
             Chauffeur Services
           </Title>
         </HeadingWrapper>
-        <Overlay backGround={Theme.colors.black} />
-      </LandingPageWrapper>
-    </MainWrapper>
+
+        <CarRentaSearch />
+      </LandingPageContainer>
+      <Overlay backGround={Theme.colors.black} />
+    </LandingPageWrapper>
   );
 };
 

@@ -10,14 +10,15 @@ export const MainWrapper = styled.main``;
 export const LandingPageWrapper = styled.div<HomeProps>`
   position: relative;
   height: 780px;
-  width: 100%;
+
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   background-image: url(${({ backGroundImage }) => backGroundImage});
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 46px;
+  padding: 30px;
 `;
 
 export const ImageWrapper = styled.div`
@@ -35,8 +36,15 @@ export const Overlay = styled.div<HomeProps>`
 `;
 
 export const HeadingWrapper = styled.div`
-  width: 1170px;
+  flex: 1;
+`;
+export const LandingPageContainer = styled.div`
   margin: 0 auto;
   z-index: 2;
-  position: relative;
+
+  width: 100%;
+  max-width: 1170px;
+  display: flex;
+  gap: 70px;
+  flex-direction: column;
 `;

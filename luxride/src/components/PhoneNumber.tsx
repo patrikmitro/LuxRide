@@ -28,7 +28,7 @@ const PhoneWrapper = styled.div<PhoneNumberProps>`
 const PhoneNumber = ({ isFooter, fontSize }: PhoneNumberProps) => {
   return (
     <PhoneWrapper isFooter={isFooter} fontSize="">
-      <Image src={Call} alt="phone number" />
+      <Image src={Call} alt="phone" />
       <Text fontColor={Theme.colors.white} fontSize={fontSize} fontWeight="500">
         +42 2323 2323
       </Text>
