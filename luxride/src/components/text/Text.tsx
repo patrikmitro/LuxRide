@@ -11,7 +11,7 @@ interface TextProps {
   textDecoration?: string;
 }
 
-const Span = styled.span<TextProps>`
+export const Text = styled.span<TextProps>`
   font-weight: ${({ fontWeight }) => fontWeight};
   font-size: ${({ fontSize }) => fontSize};
   color: ${({ fontColor }) => fontColor};
@@ -20,24 +20,3 @@ const Span = styled.span<TextProps>`
     ${({ hover }) => hover}
   }
 `;
-
-const Text = ({
-  children,
-  fontWeight,
-  fontSize,
-  fontColor,
-  hover,
-}: TextProps) => {
-  return (
-    <Span
-      fontWeight={fontWeight}
-      fontSize={fontSize}
-      fontColor={fontColor}
-      hover={hover}
-    >
-      {children}
-    </Span>
-  );
-};
-
-export default Text;
