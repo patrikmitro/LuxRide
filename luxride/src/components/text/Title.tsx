@@ -10,7 +10,7 @@ interface HeadingProps {
   textDecoration?: string;
 }
 
-const Heading = ({
+const Title = ({
   level,
   children,
   fontColor,
@@ -36,4 +36,4 @@ const Heading = ({
   );
 };
 
-export default Heading;
+export default Title;
