@@ -9,7 +9,7 @@ export const MainWrapper = styled.main``;
 
 export const LandingPageWrapper = styled.div<HomeProps>`
   position: relative;
-  height: 780px;
+  height: 580px;
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -45,6 +45,12 @@ export const LandingPageContainer = styled.div`
   width: 100%;
   max-width: 1170px;
   display: flex;
-  gap: 70px;
+  gap: 160px;
   flex-direction: column;
+  @media only screen and (max-width: 990px) {
+    gap: 80px;
+    h1 {
+      font-size: 44px;
+    }
+  }
 `;
