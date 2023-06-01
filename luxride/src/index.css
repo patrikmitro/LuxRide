@@ -1,12 +1,19 @@
 html {
   background-color: black;
 }
-
+* {
+  margin: 0;
+}
 body {
   margin: 0;
   font-family: "DM Sans";
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+  @media only screen and (max-width: 920px) {
+    margin-top: 80px;
+  }
 }
 
 input,
@@ -15,6 +22,8 @@ button {
   font-family: inherit;
   font-size: inherit;
   padding: 0;
+  outline: none;
+  border: none;
 }
 
 a {
