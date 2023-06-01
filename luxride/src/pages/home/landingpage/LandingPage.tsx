@@ -2,18 +2,17 @@ import React from "react";
 
 import { Theme } from "../../../styles/theme.styles";
 import { Text } from "../../../components/text/Text";
-import Image from "../../../components/image/Image";
+
 import Title from "../../../components/text/Title";
 import {
   LandingPageWrapper,
-  ImageWrapper,
   Overlay,
   HeadingWrapper,
   LandingPageContainer,
 } from "../landingpage/LandingPage.styles";
 
 import LandingPageBackground from "../../../assets/images/MercedesBackGround.png";
-import CarRentaSearch from "./carrentalsearch/CarRentalSearch";
+import CarRentalSearch from "./carrentalsearch/CarRentalSearch";
 const LandingPage = () => {
   return (
     <LandingPageWrapper backGroundImage={LandingPageBackground}>
@@ -33,7 +32,7 @@ const LandingPage = () => {
           </Title>
         </HeadingWrapper>
 
-        <CarRentaSearch />
+        <CarRentalSearch />
       </LandingPageContainer>
       <Overlay backGround={Theme.colors.black} />
     </LandingPageWrapper>
