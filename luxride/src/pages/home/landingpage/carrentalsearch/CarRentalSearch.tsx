@@ -1,29 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
 import { Theme } from "../../../../styles/theme.styles";
 import { Text } from "../../../../components/text/Text";
-
-import CalendarIcon from "../../../../assets/images/CalendarIcon.png";
-import kokot from "../../../../assets/images/AppleLogo.png";
+import Image from "../../../../components/image/Image";
 import {
   SearchWrapper,
   StyledLabel,
   StyledInput,
+  StyledSelect,
+  StyledOption,
+  SearchContainer,
 } from "./CarRentalSearch.styles";
 
-const CarRentaSearch = () => {
-  return (
-    <SearchWrapper backGround={Theme.colors.white}>
-      <StyledLabel>
-        <Text fontColor={Theme.colors.grey}>Date</Text>
-        <StyledInput type="date"></StyledInput>
-      </StyledLabel>
+import FromLocationIcon from "../../../../assets/images/FromLocationIcon.png";
+import ToLocationIcon from "../../../../assets/images/ToLocationIcon.png";
+import SearchIcon from "../../../../assets/images/SearchIcon.png";
+import { LocationsData } from "./LocationsData";
+import ActionButton from "../../../../components/button/ActionButton";
+const CarRentalSearch = () => {
+  const [time, setTime] = useState("");
 
-      <StyledLabel>
-        <Text fontColor={Theme.colors.grey}>Time</Text>
-        <StyledInput type="time"></StyledInput>
-      </StyledLabel>
+  const onChangeDate = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setTime(e.target.value);
+  };
+
+  return (
+    <SearchWrapper>
+      <SearchContainer backGround={Theme.colors.white}>
+        <StyledLabel backGround={Theme.colors.whiteGrey}>
+          <StyledInput type="date" onChange={onChangeDate} />
+        </StyledLabel>
+
+        <StyledLabel backGround={Theme.colors.whiteGrey}>
+          <StyledInput type="time" />
+        </StyledLabel>
+        <StyledLabel backGround={Theme.colors.whiteGrey}>
+          <Image src={FromLocationIcon} alt="from-arrow" width="20px" />
+          <StyledSelect>
+            <StyledOption value="Select Location">Select Location</StyledOption>
+            {LocationsData.map(({ value, location }) => (
+              <StyledOption key={value} value={value}>
+                {location}
+              </StyledOption>
+            ))}
+          </StyledSelect>
+        </StyledLabel>
+        <StyledLabel backGround={Theme.colors.whiteGrey}>
+          <Image src={ToLocationIcon} alt="from-arrow" width="20px" />
+          <StyledSelect>
+            <StyledOption value="Select Location">Select Location</StyledOption>
+            {LocationsData.map(({ value, location }) => (
+              <StyledOption key={value} value={value}>
+                {location}
+              </StyledOption>
+            ))}
+          </StyledSelect>
+        </StyledLabel>
+
+        <ActionButton borderRadius="60px">
+          <Image src={SearchIcon} alt="search-icon" width="20px" />
+          <Text fontSize="16px" fontColor={Theme.colors.white} fontWeight="500">
+            Search
+          </Text>
+        </ActionButton>
+      </SearchContainer>
     </SearchWrapper>
   );
 };
 
-export default CarRentaSearch;
+export default CarRentalSearch;
