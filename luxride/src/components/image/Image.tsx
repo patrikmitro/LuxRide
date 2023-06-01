@@ -9,6 +9,7 @@ interface ImageProps {
   padding?: string;
   height?: string;
   objectFit?: string;
+  onClick?: () => void;
 }
 
 const StyledImage = styled.img<ImageProps>`
@@ -19,7 +20,15 @@ const StyledImage = styled.img<ImageProps>`
   height: ${({ height }) => height};
   object-fit: ${({ objectFit }) => objectFit};
 `;
-const Image = ({ src, alt, width, padding, height, objectFit }: ImageProps) => {
+const Image = ({
+  src,
+  alt,
+  width,
+  padding,
+  height,
+  objectFit,
+  onClick,
+}: ImageProps) => {
   return (
     <StyledImage
       src={src}
@@ -28,6 +37,7 @@ const Image = ({ src, alt, width, padding, height, objectFit }: ImageProps) => {
       padding={padding}
       height={height}
       objectFit={objectFit}
+      onClick={onClick}
     />
   );
 };
