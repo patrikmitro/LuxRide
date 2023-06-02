@@ -4,6 +4,7 @@ interface Props {
 }
 export const PartnersPageWrapper = styled.section<Props>`
   padding: 30px;
+  position: relative;
   ::after {
     content: "";
     display: block;
@@ -18,10 +19,14 @@ export const PartnersPageWrapper = styled.section<Props>`
 export const PartnersPageContainer = styled.div`
   display: flex;
   justify-content: space-between;
+
   align-items: center;
   width: 100%;
   max-width: 1170px;
   margin: 74px auto;
+  @media only screen and (max-width: 990px) {
+    flex-direction: column;
+  }
 `;
 export const TitleWrapper = styled.div``;
 

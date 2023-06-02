@@ -6,6 +6,7 @@ export const LinkWrapper = styled.div`
   @media only screen and (max-width: 920px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-row-gap: 16px;
   }
 `;
 
@@ -14,6 +15,7 @@ export const MainSectionWrapper = styled.div`
   grid-template-columns: 1fr auto;
   @media only screen and (max-width: 920px) {
     grid-template-columns: 1fr;
+    grid-row-gap: 16px;
   }
 `;
 

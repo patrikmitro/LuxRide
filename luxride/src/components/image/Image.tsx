@@ -9,6 +9,8 @@ interface ImageProps {
   padding?: string;
   height?: string;
   objectFit?: string;
+  backGroundColor?: string;
+  borderRadius?: string;
   onClick?: () => void;
 }
 
@@ -19,6 +21,8 @@ const StyledImage = styled.img<ImageProps>`
   padding: ${({ padding }) => padding};
   height: ${({ height }) => height};
   object-fit: ${({ objectFit }) => objectFit};
+  background-color: ${({ backGroundColor }) => backGroundColor};
+  border-radius: ${({ borderRadius }) => borderRadius};
 `;
 const Image = ({
   src,
@@ -26,12 +30,16 @@ const Image = ({
   width,
   padding,
   height,
+  backGroundColor,
   objectFit,
   onClick,
+  borderRadius,
 }: ImageProps) => {
   return (
     <StyledImage
+      backGroundColor={backGroundColor}
       src={src}
+      borderRadius={borderRadius}
       alt={alt}
       width={width}
       padding={padding}

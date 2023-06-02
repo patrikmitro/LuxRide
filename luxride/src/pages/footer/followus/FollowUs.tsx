@@ -3,7 +3,7 @@ import { Text } from "../../../components/text/Text";
 import FacebookLogo from "../../../assets/images/FacebookLogo.png";
 import TwitterLogo from "../../../assets/images/TwitterLogo.png";
 import InLogo from "../../../assets/images/InLogo.png";
-import InstagramLogo from "../../../assets/images/InstagramLogo.png";
+import InstagramLogoIcon from "../../../assets/images/InstagramLogoIcon.png";
 import styled from "styled-components";
 import { Theme } from "../../../styles/theme.styles";
 import ActionImage from "../../../components/image/ActionImage";
@@ -11,11 +11,21 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 16px;
+  @media only screen and (max-width: 990px) {
+    align-items: flex-end;
+  }
 `;
 const ImageWrapper = styled.div`
   display: flex;
+
+  @media only screen and (max-width: 900px) {
+    img {
+      padding: 0;
+    }
+  }
 `;
 const ImageBox = styled.div`
+  box-sizing: content-box;
   width: 50px;
   justify-content: center;
   display: flex;
@@ -87,7 +97,7 @@ const FollowUs = () => {
         <ImageBox>
           <ActionImage
             to="/"
-            src={InstagramLogo}
+            src={InstagramLogoIcon}
             alt="instagramlogo"
             width="auto"
             padding="14px"

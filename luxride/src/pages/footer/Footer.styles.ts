@@ -18,7 +18,7 @@ export const FooterWrapper = styled.div`
   padding: 24px 12px;
   margin: auto;
   @media only screen and (max-width: 920px) {
-    padding: 24px 32px;
+    padding: 24px 12px;
   }
 `;
 
@@ -43,9 +43,13 @@ export const LogoContactContainer = styled.div`
   align-items: center;
   @media screen and (max-width: 960px) {
     flex-direction: column;
+    align-items: flex-start;
   }
 `;
-export const FollowUsContainer = styled.div``;
+export const FollowUsContainer = styled.div`
+  display: flex;
+  align-items: flex-end;
+`;
 export const MiddleWrapper = styled.div<Props>`
   ::after {
     display: block;

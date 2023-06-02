@@ -1,5 +1,6 @@
 html {
   background-color: black;
+  overflow-x: hidden;
 }
 * {
   margin: 0;
@@ -11,6 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
+  overflow-x: hidden;
   @media only screen and (max-width: 920px) {
     margin-top: 80px;
   }
