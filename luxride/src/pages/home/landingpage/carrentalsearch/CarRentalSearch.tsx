@@ -26,14 +26,14 @@ const CarRentalSearch = () => {
   return (
     <SearchWrapper>
       <SearchContainer backGround={Theme.colors.white}>
-        <StyledLabel backGround={Theme.colors.whiteGrey}>
+        <StyledLabel backGround={Theme.colors.white}>
           <StyledInput type="date" onChange={onChangeDate} />
         </StyledLabel>
 
-        <StyledLabel backGround={Theme.colors.whiteGrey}>
+        <StyledLabel backGround={Theme.colors.white}>
           <StyledInput type="time" />
         </StyledLabel>
-        <StyledLabel backGround={Theme.colors.whiteGrey}>
+        <StyledLabel backGround={Theme.colors.white}>
           <Image src={FromLocationIcon} alt="from-arrow" width="20px" />
           <StyledSelect>
             <StyledOption value="Select Location">Select Location</StyledOption>
@@ -44,7 +44,7 @@ const CarRentalSearch = () => {
             ))}
           </StyledSelect>
         </StyledLabel>
-        <StyledLabel backGround={Theme.colors.whiteGrey}>
+        <StyledLabel backGround={Theme.colors.white}>
           <Image src={ToLocationIcon} alt="from-arrow" width="20px" />
           <StyledSelect>
             <StyledOption value="Select Location">Select Location</StyledOption>

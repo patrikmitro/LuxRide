@@ -29,7 +29,6 @@ export const SearchWrapper = styled.div<Props>`
   @media only screen and (max-width: 990px) {
     margin: -30px;
     padding: 16px;
-    background-color: #fff;
   }
 `;
 

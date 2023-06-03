@@ -24,8 +24,7 @@ const PartnersPage = () => {
             fontSize="24px"
             fontWeight="500"
           >
-            The partners who sell
-            <br /> our products
+            The partners who sell our products
           </Title>
         </TitleWrapper>
         <IconsWrapper>

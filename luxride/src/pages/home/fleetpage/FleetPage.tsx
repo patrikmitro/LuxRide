@@ -6,6 +6,7 @@ import {
   MoreFleetContainer,
   FleetCardWrapper,
   SliderButtonWrapper,
+  FleetBackGround,
 } from "./FleetPage.styles";
 import { Text } from "../../../components/text/Text";
 import { Theme } from "../../../styles/theme.styles";
@@ -21,17 +22,17 @@ import RightSliderArrow from "../../../assets/images/RightSliderArrow.png";
 import { FleetData } from "./fleetcard/FleetData";
 
 const FleetPage = () => {
-  const [fleetCardIndex, setFleetCardIndex] = useState(FleetData.length - 1);
+  const [fleetCardIndex, setFleetCardIndex] = useState(FleetData.length - 2);
   const [fleetCardMargin, setFleetCardMargin] = useState(0);
 
   const handleFleetCardMarginLeft = () => {
-    if (fleetCardIndex >= 0 && fleetCardIndex < FleetData.length - 1) {
+    if (fleetCardIndex >= 0 && fleetCardIndex < FleetData.length - 2) {
       setFleetCardMargin((prevState) => prevState + 430);
       setFleetCardIndex((prevState) => prevState + 1);
     }
   };
   const handleFleetCardMarginRight = () => {
-    if (fleetCardIndex <= FleetData.length - 1 && fleetCardIndex > 0) {
+    if (fleetCardIndex <= FleetData.length - 2 && fleetCardIndex > 0) {
       setFleetCardMargin((prevState) => prevState - 430);
       setFleetCardIndex((prevState) => prevState - 1);
     }
@@ -76,12 +77,12 @@ const FleetPage = () => {
           <SliderButton
             onClick={handleFleetCardMarginLeft}
             backGroundColor={
-              fleetCardIndex >= 0 && fleetCardIndex < FleetData.length - 1
+              fleetCardIndex >= 0 && fleetCardIndex < FleetData.length - 2
                 ? Theme.colors.whiteGrey
                 : Theme.colors.white
             }
             borderColor={
-              fleetCardIndex >= 0 && fleetCardIndex < FleetData.length - 1
+              fleetCardIndex >= 0 && fleetCardIndex < FleetData.length - 2
                 ? Theme.colors.baseBlack
                 : Theme.colors.lightGrey
             }
@@ -106,6 +107,7 @@ const FleetPage = () => {
           </SliderButton>
         </SliderButtonWrapper>
       </FleetPageContainer>
+      <FleetBackGround />
     </FleetPageWrapper>
   );
 };

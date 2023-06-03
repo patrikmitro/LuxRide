@@ -29,6 +29,7 @@ const Footer = () => {
           <TopContainer>
             <LogoContactContainer>
               <Logo />
+
               <PhoneNumber isFooter fontSize="18px" />
             </LogoContactContainer>
             <FollowUsContainer>

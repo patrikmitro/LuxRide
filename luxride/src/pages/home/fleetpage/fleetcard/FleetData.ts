@@ -40,4 +40,11 @@ export const FleetData: {
     luggage: "3",
     url: "./images/mercedes-g-class.png",
   },
+  {
+    title: "Luxury Class",
+    text: "Mercedes-Benz EQS, BMW 7 Series, Audi A8 or similar",
+    passengers: "4",
+    luggage: "3",
+    url: "./images/mercedes-s-class.png",
+  },
 ];

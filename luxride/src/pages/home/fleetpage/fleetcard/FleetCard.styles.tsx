@@ -7,6 +7,7 @@ interface FleetCardProps {
 export const FleetCardWrapper = styled.div<FleetCardProps>`
   min-width: 400px;
   max-width: 400px;
+  background-color: #fff;
   height: 400px;
   border: 1px solid ${({ backGroundColor }) => backGroundColor};
   border-radius: 6px;

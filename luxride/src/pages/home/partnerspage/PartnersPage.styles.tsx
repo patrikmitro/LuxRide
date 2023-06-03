@@ -18,7 +18,7 @@ export const PartnersPageWrapper = styled.section<Props>`
 `;
 export const PartnersPageContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  gap: 24px;
 
   align-items: center;
   width: 100%;
@@ -26,6 +26,8 @@ export const PartnersPageContainer = styled.div`
   margin: 74px auto;
   @media only screen and (max-width: 990px) {
     flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
   }
 `;
 export const TitleWrapper = styled.div``;
