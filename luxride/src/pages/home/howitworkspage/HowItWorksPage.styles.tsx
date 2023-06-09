@@ -17,7 +17,7 @@ export const HowItWorksContainer = styled.div`
   max-width: 1170px;
 
   @media only screen and (max-width: 990px) {
-    margin: 32px auto;
+    margin: 0 auto;
     align-items: flex-start;
   }
 `;

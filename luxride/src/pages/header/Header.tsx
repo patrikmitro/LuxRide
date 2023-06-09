@@ -18,9 +18,9 @@ import { Theme } from "../../styles/theme.styles";
 
 //components
 import NavList from "./navmenu/NavList";
-import Logo from "../../components/Logo";
+import Logo from "@/components/Logo";
 import NavForm from "./navform/NavForm";
-import PhoneNumber from "../../components/PhoneNumber";
+import PhoneNumber from "@/components/PhoneNumber";
 import NavBurger from "./mobileview/navburger/NavBurger";
 
 const Navbar = () => {

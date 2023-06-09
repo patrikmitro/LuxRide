@@ -10,5 +10,7 @@ export const Theme = {
     white: "#FFFFFF",
     whiteGrey: "#F6F6F6",
     lightGrey: "#E5E5E5",
+    orange: "#E95440",
+    lightRed: "#FDEEEC",
   },
 };

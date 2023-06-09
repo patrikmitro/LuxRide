@@ -1,7 +1,7 @@
 import React from "react";
-import { Text } from "../../../components/text/Text";
-import Title from "../../../components/text/Title";
-import Image from "../../../components/image/Image";
+import { Text } from "@/components/text/Text";
+import Title from "@/components/text/Title";
+import Image from "@/components/image/Image";
 import { Theme } from "../../../styles/theme.styles";
 import {
   PartnersPageWrapper,

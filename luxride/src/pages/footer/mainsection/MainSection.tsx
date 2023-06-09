@@ -8,9 +8,9 @@ import {
   DownloadAppWrapper,
 } from "./MainSection.styles";
 import { mainSectionData } from "./mainsectiondata/mainSectionData";
-import { Text } from "../../../components/text/Text";
+import { Text } from "@/components/text/Text";
 import { Theme } from "../../../styles/theme.styles";
-import DownloadAppButton from "./downloadapp/DownloadAppButton";
+import DownloadAppButton from "@/components/button/DownloadAppButton";
 import AppleLogo from "../../../assets/images/AppleLogo.png";
 import GooglePlayLogo from "../../../assets/images/PlayStoreLogo.png";
 interface SubMenu {
@@ -33,6 +33,7 @@ const MainSection = () => {
               fontColor={Theme.colors.white}
               fontSize="18px"
               fontWeight="600"
+              style={{ marginBottom: "20px" }}
             >
               {menu.heading}
             </Text>

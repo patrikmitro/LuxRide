@@ -6,9 +6,10 @@ import {
   AccordionWrapper,
   FaqBackGround,
 } from "./FaqPage.styles";
-import Title from "../../../components/text/Title";
+import Title from "@/components/text/Title";
 import FaqAccordion from "./Accordion";
 import { FaqData } from "./FaqData";
+
 const FaqPage = () => {
   return (
     <FaqPageWrapper>
@@ -24,6 +25,7 @@ const FaqPage = () => {
           ))}
         </AccordionWrapper>
       </FaqPageContainer>
+
       <FaqBackGround />
     </FaqPageWrapper>
   );

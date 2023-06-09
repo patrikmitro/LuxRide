@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Theme } from "@/styles/theme.styles";
 interface ButtonProps {
   children: React.ReactNode;
   borderRadius: string;
@@ -15,7 +15,10 @@ const StyledActionButton = styled.button<ButtonProps>`
   gap: 8px;
   padding: 14px 24px;
   border-radius: ${({ borderRadius }) => borderRadius};
-  background-color: #000;
+  background-color: ${Theme.colors.black};
+  :hover {
+    background-color: ${Theme.colors.orange};
+  }
   cursor: pointer;
 `;
 

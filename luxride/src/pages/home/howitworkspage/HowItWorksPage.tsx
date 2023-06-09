@@ -1,6 +1,6 @@
 import React from "react";
-import img from "../../../assets/images/MacBookMockUp.png";
-import Image from "../../../components/image/Image";
+import img from "@/assets/images/MacBookMockUp.png";
+import Image from "@/components/image/Image";
 import {
   HowItWorksWrapper,
   HowItWorksContainer,
@@ -10,9 +10,9 @@ import {
   TextImageWrapper,
 } from "./HowItWorksPage.styles";
 import { Theme } from "../../../styles/theme.styles";
-import { Text } from "../../../components/text/Text";
-import { Paragraph } from "../../../components/text/Paragraph";
-import Title from "../../../components/text/Title";
+import { Text } from "@/components/text/Text";
+import { Paragraph } from "@/components/text/Paragraph";
+import Title from "@/components/text/Title";
 const HowItWorksPage = () => {
   return (
     <HowItWorksWrapper backGroundColor={Theme.colors.black}>

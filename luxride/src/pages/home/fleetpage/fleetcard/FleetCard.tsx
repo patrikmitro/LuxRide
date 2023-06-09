@@ -7,11 +7,11 @@ import {
   FeaturesWrapper,
   FeaturesContent,
 } from "./FleetCard.styles";
-import Title from "../../../../components/text/Title";
-import { Text } from "../../../../components/text/Text";
-import Image from "../../../../components/image/Image";
+import Title from "@/components/text/Title";
+import { Text } from "@/components/text/Text";
+import Image from "@/components/image/Image";
 import { Theme } from "../../../../styles/theme.styles";
-import { Paragraph } from "../../../../components/text/Paragraph";
+import { Paragraph } from "@/components/text/Paragraph";
 import PassengersIcon from "../../../../assets/images/PassengersIcon.png";
 import LuggageIcon from "../../../../assets/images/LuggageIcon.png";
 interface FleetCardProps {

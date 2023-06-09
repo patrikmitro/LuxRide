@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Theme } from "../../../../styles/theme.styles";
-import { Text } from "../../../../components/text/Text";
-import Image from "../../../../components/image/Image";
+import { Text } from "@/components/text/Text";
+import Image from "@/components/image/Image";
 import {
   SearchWrapper,
   StyledLabel,
@@ -15,7 +15,7 @@ import FromLocationIcon from "../../../../assets/images/FromLocationIcon.png";
 import ToLocationIcon from "../../../../assets/images/ToLocationIcon.png";
 import SearchIcon from "../../../../assets/images/SearchIcon.png";
 import { LocationsData } from "./LocationsData";
-import ActionButton from "../../../../components/button/ActionButton";
+import ActionButton from "@/components/button/ActionButton";
 const CarRentalSearch = () => {
   const [time, setTime] = useState("");
 

@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { Text } from "../../../components/text/Text";
-import FacebookLogo from "../../../assets/images/FacebookLogo.png";
-import TwitterLogo from "../../../assets/images/TwitterLogo.png";
-import InLogo from "../../../assets/images/InLogo.png";
-import InstagramLogoIcon from "../../../assets/images/InstagramLogoIcon.png";
+import { Text } from "@/components/text/Text";
+import FacebookLogo from "@/assets/images/FacebookLogo.png";
+import TwitterLogo from "@/assets/images/TwitterLogo.png";
+import InLogo from "@/assets/images/InLogo.png";
+import InstagramLogoIcon from "@/assets/images/InstagramLogoIcon.png";
 import styled from "styled-components";
-import { Theme } from "../../../styles/theme.styles";
-import ActionImage from "../../../components/image/ActionImage";
+import { Theme } from "@/styles/theme.styles";
+import ActionImage from "@/components/image/ActionImage";
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 16px;
-  @media only screen and (max-width: 990px) {
+  @media only screen and (max-width: 560px) {
     align-items: flex-end;
   }
 `;

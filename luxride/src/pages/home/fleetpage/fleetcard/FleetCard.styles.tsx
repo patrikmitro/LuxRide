@@ -5,7 +5,7 @@ interface FleetCardProps {
 }
 
 export const FleetCardWrapper = styled.div<FleetCardProps>`
-  min-width: 400px;
+  min-width: 370px;
   max-width: 400px;
   background-color: #fff;
   height: 400px;
@@ -13,6 +13,7 @@ export const FleetCardWrapper = styled.div<FleetCardProps>`
   border-radius: 6px;
   padding: 30px;
   box-sizing: border-box;
+  cursor: pointer;
 `;
 
 export const FleetCardContainer = styled.div`
@@ -33,6 +34,10 @@ export const ImageWrapper = styled.div`
   flex-direction: column;
   position: relative;
   height: 120px;
+  transition: all 0.3s ease;
+  :hover {
+    transform: translateY(-8px);
+  }
 `;
 
 export const FeaturesWrapper = styled.div`

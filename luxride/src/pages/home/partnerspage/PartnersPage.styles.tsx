@@ -3,7 +3,7 @@ interface Props {
   backGroundColor: string;
 }
 export const PartnersPageWrapper = styled.section<Props>`
-  padding: 30px;
+  padding: 24px;
   position: relative;
   ::after {
     content: "";
@@ -25,6 +25,8 @@ export const PartnersPageContainer = styled.div`
   max-width: 1170px;
   margin: 74px auto;
   @media only screen and (max-width: 990px) {
+    margin: 0 auto;
+    padding-bottom: 24px;
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;

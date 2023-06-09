@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { MainWrapper } from "./Home.styles";
 
@@ -7,15 +7,29 @@ import PartnersPage from "./partnerspage/PartnersPage";
 import FleetPage from "./fleetpage/FleetPage";
 import HowItWorksPage from "./howitworkspage/HowItWorksPage";
 import FaqPage from "./faqpage/FaqPage";
+import ShowCasePage from "./showcasepage/ShowCasePage";
+import ServicesPage from "./servicespage/ServicesPage";
+import RegionPage from "./regionpage/RegionPage";
+import DownloadAppPage from "./downloadapppage/DownloadAppPage";
+import TestimonialsPage from "./testimonialspage/TestimonialsPage";
 const Home = () => {
+  useEffect(() => {
+    document.title = "LUXRIDE";
+  });
   return (
-    <MainWrapper>
+    <>
       <LandingPage />
       <PartnersPage />
       <FleetPage />
       <HowItWorksPage />
+
+      <ServicesPage />
+      <ShowCasePage />
+      <RegionPage />
+      <TestimonialsPage />
       <FaqPage />
-    </MainWrapper>
+      <DownloadAppPage />
+    </>
   );
 };
 

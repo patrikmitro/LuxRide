@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Theme } from "../../../../styles/theme.styles";
-import Image from "../../../../components/image/Image";
+import { Theme } from "../../styles/theme.styles";
+import Image from "../image/Image";
 
 interface DownloadAppButtonProps {
   src: string;
@@ -20,6 +20,7 @@ const DownloadAppButtonWrapper = styled.div`
   position: relative;
   max-width: 210px;
   margin-top: 16px;
+  background-color: ${Theme.colors.black};
   padding: 12px;
   display: flex;
 `;

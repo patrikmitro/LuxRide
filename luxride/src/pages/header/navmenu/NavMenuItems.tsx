@@ -5,10 +5,10 @@ import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
 
 // styled components
-import { Text } from "../../../components/text/Text";
+import { Text } from "@/components/text/Text";
 
 // colors
-import { Theme } from "../../../styles/theme.styles";
+import { Theme } from "@/styles/theme.styles";
 
 interface MenuItems {
   title: string;

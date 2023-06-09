@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 import { menuItems } from "./navmenudata/navMenuItemsData";
 
-import { Theme } from "../../../styles/theme.styles";
+import { Theme } from "@/styles/theme.styles";
 import NavMenuItems from "./NavMenuItems";
 interface Props {
   isOpened: boolean;
@@ -16,7 +16,7 @@ const UnorderedList = styled.ul`
 
   @media only screen and (max-width: 920px) {
     flex-direction: column;
-
+    padding: 24px;
     a {
       &:hover {
         background-color: transparent;

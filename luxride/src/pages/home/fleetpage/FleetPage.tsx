@@ -1,42 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   FleetPageWrapper,
   FleetPageContainer,
   FleetTitleContainer,
   MoreFleetContainer,
-  FleetCardWrapper,
-  SliderButtonWrapper,
   FleetBackGround,
 } from "./FleetPage.styles";
-import { Text } from "../../../components/text/Text";
+import { Text } from "@/components/text/Text";
 import { Theme } from "../../../styles/theme.styles";
-import Image from "../../../components/image/Image";
-import Title from "../../../components/text/Title";
+import Image from "@/components/image/Image";
+import Title from "@/components/text/Title";
 import TopRightArrow from "../../../assets/images/TopRightArrow.png";
 import { Link } from "react-router-dom";
 import FleetCard from "./fleetcard/FleetCard";
-import SliderButton from "../../../components/button/SliderButton";
-import LeftSliderArrow from "../../../assets/images/LeftSliderArrow.png";
-import RightSliderArrow from "../../../assets/images/RightSliderArrow.png";
 
 import { FleetData } from "./fleetcard/FleetData";
+import SlideShow from "@/components/slideshow/SlideShow";
 
 const FleetPage = () => {
-  const [fleetCardIndex, setFleetCardIndex] = useState(FleetData.length - 2);
-  const [fleetCardMargin, setFleetCardMargin] = useState(0);
-
-  const handleFleetCardMarginLeft = () => {
-    if (fleetCardIndex >= 0 && fleetCardIndex < FleetData.length - 2) {
-      setFleetCardMargin((prevState) => prevState + 430);
-      setFleetCardIndex((prevState) => prevState + 1);
-    }
-  };
-  const handleFleetCardMarginRight = () => {
-    if (fleetCardIndex <= FleetData.length - 2 && fleetCardIndex > 0) {
-      setFleetCardMargin((prevState) => prevState - 430);
-      setFleetCardIndex((prevState) => prevState - 1);
-    }
-  };
   return (
     <FleetPageWrapper>
       <FleetPageContainer>
@@ -62,7 +43,7 @@ const FleetPage = () => {
             </MoreFleetContainer>
           </Link>
         </FleetTitleContainer>
-        <FleetCardWrapper marginLeft={fleetCardMargin.toString()}>
+        <SlideShow data={FleetData.length}>
           {FleetData.map(({ title, text, url, passengers, luggage }) => (
             <FleetCard
               title={title}
@@ -72,40 +53,7 @@ const FleetPage = () => {
               luggage={luggage}
             />
           ))}
-        </FleetCardWrapper>
-        <SliderButtonWrapper>
-          <SliderButton
-            onClick={handleFleetCardMarginLeft}
-            backGroundColor={
-              fleetCardIndex >= 0 && fleetCardIndex < FleetData.length - 2
-                ? Theme.colors.whiteGrey
-                : Theme.colors.white
-            }
-            borderColor={
-              fleetCardIndex >= 0 && fleetCardIndex < FleetData.length - 2
-                ? Theme.colors.baseBlack
-                : Theme.colors.lightGrey
-            }
-          >
-            <Image src={LeftSliderArrow} alt="left-arrow" width="20px" />
-          </SliderButton>
-
-          <SliderButton
-            onClick={handleFleetCardMarginRight}
-            backGroundColor={
-              fleetCardIndex <= 6 && fleetCardIndex > 0
-                ? Theme.colors.whiteGrey
-                : Theme.colors.white
-            }
-            borderColor={
-              fleetCardIndex <= 6 && fleetCardIndex > 0
-                ? Theme.colors.baseBlack
-                : Theme.colors.lightGrey
-            }
-          >
-            <Image src={RightSliderArrow} alt="right-arrow" width="20px" />
-          </SliderButton>
-        </SliderButtonWrapper>
+        </SlideShow>
       </FleetPageContainer>
       <FleetBackGround />
     </FleetPageWrapper>

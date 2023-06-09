@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const FaqPageWrapper = styled.section`
   position: relative;
+  overflow: hidden;
 `;
 
 export const FaqPageContainer = styled.div`
@@ -13,7 +14,7 @@ export const FaqPageContainer = styled.div`
   gap: 46px;
   margin: 76px auto;
   @media only screen and (max-width: 990px) {
-    margin: 24px auto;
+    margin: 0 auto;
   }
 `;
 

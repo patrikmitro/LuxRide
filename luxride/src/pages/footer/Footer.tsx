@@ -17,8 +17,8 @@ import { Theme } from "../../styles/theme.styles";
 
 // components
 import FollowUs from "./followus/FollowUs";
-import Logo from "../../components/Logo";
-import PhoneNumber from "../../components/PhoneNumber";
+import Logo from "@/components/Logo";
+import PhoneNumber from "@/components/PhoneNumber";
 import MainSection from "./mainsection/MainSection";
 import LegalSection from "./followus/legalsection/LegalSection";
 const Footer = () => {

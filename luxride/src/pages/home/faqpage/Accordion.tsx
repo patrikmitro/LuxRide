@@ -2,9 +2,9 @@ import React from "react";
 
 import AccordionDetails from "@mui/material/AccordionDetails";
 
-import Title from "../../../components/text/Title";
+import Title from "@/components/text/Title";
 import { Theme } from "../../../styles/theme.styles";
-import { Paragraph } from "../../../components/text/Paragraph";
+import { Paragraph } from "@/components/text/Paragraph";
 import { styled } from "@mui/material/styles";
 
 import MuiAccordion, { AccordionProps } from "@mui/material/Accordion";

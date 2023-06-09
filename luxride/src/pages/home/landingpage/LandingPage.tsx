@@ -1,9 +1,9 @@
 import React from "react";
 
 import { Theme } from "../../../styles/theme.styles";
-import { Text } from "../../../components/text/Text";
+import { Text } from "@/components/text/Text";
 
-import Title from "../../../components/text/Title";
+import Title from "@/components/text/Title";
 import {
   LandingPageWrapper,
   Overlay,
