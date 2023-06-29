@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const NotFoundWrapper = styled.div`
   padding: 24px;
+  @media only screen and (max-width: 560px) {
+    margin-top: 80px;
+  }
 `;
 
 export const NotFoundContainer = styled.div`

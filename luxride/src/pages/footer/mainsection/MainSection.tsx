@@ -1,23 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  MainSectionWrapper,
-  LinkWrapper,
-  Wrapper,
-  List,
-  DownloadAppWrapper,
-} from "./MainSection.styles";
+
+// Styled components
+import * as Styled from "./MainSection.styles";
+
+// main section data
 import { mainSectionData } from "./mainsectiondata/mainSectionData";
+
+// Components
 import { Text } from "@/components/text/Text";
+
+// Colors
 import { Theme } from "../../../styles/theme.styles";
+
+// images
 import DownloadAppButton from "@/components/button/DownloadAppButton";
 import AppleLogo from "../../../assets/images/AppleLogo.png";
 import GooglePlayLogo from "../../../assets/images/PlayStoreLogo.png";
+
+// Define interface for sub-menu items
 interface SubMenu {
   heading: string;
   link: string;
 }
 
+// Define interface for menu items
 interface Menu {
   heading: string;
   submenu: SubMenu[];
@@ -25,10 +32,10 @@ interface Menu {
 
 const MainSection = () => {
   return (
-    <MainSectionWrapper>
-      <LinkWrapper>
+    <Styled.MainSectionWrapper>
+      <Styled.LinkWrapper>
         {mainSectionData.map((menu: Menu) => (
-          <Wrapper key={menu.heading}>
+          <Styled.Wrapper key={menu.heading}>
             <Text
               fontColor={Theme.colors.white}
               fontSize="18px"
@@ -39,7 +46,7 @@ const MainSection = () => {
             </Text>
             <ul>
               {menu.submenu.map((subMenu: SubMenu) => (
-                <List key={subMenu.heading}>
+                <Styled.List key={subMenu.heading}>
                   <Link to={subMenu.link}>
                     <Text
                       fontColor={Theme.colors.white}
@@ -48,13 +55,13 @@ const MainSection = () => {
                       {subMenu.heading}
                     </Text>
                   </Link>
-                </List>
+                </Styled.List>
               ))}
             </ul>
-          </Wrapper>
+          </Styled.Wrapper>
         ))}
-      </LinkWrapper>
-      <DownloadAppWrapper>
+      </Styled.LinkWrapper>
+      <Styled.DownloadAppWrapper>
         <Text fontWeight="600" fontSize="16px">
           Download The App
         </Text>
@@ -68,8 +75,8 @@ const MainSection = () => {
             Google Play
           </Text>
         </DownloadAppButton>
-      </DownloadAppWrapper>
-    </MainSectionWrapper>
+      </Styled.DownloadAppWrapper>
+    </Styled.MainSectionWrapper>
   );
 };
 

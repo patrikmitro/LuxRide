@@ -9,7 +9,7 @@ export const FleetCardWrapper = styled.div<Props>`
 
   display: flex;
   gap: 32px;
-  transition: 1s;
+  transition: 0.4s ease-in-out;
   @media only screen and (max-width: 900px) {
     overflow-x: scroll;
     margin: 0 -30px;

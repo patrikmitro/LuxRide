@@ -19,6 +19,7 @@ export const ShowCaseContainer = styled.div`
   margin: 76px auto;
   display: flex;
   justify-content: space-between;
+
   @media only screen and (max-width: 990px) {
     margin: 0 auto;
     gap: 12px;

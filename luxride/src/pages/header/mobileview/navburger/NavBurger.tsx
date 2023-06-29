@@ -4,7 +4,7 @@ import { Theme } from "../../../../styles/theme.styles";
 
 interface NavBurgerProps {
   isOpened: boolean;
-  onClick: MouseEventHandler<HTMLDivElement>;
+  onClick: () => void;
 }
 
 const Burger1 = styled.div`

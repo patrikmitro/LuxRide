@@ -3,23 +3,21 @@ interface Props {
   backGroundColor: string;
 }
 export const PartnersPageWrapper = styled.section<Props>`
-  padding: 24px;
   position: relative;
   ::after {
     content: "";
-    display: block;
+    position: absolute;
     height: 1px;
     width: calc(100% + 60px);
-    margin-bottom: -30px;
-    margin-left: -30px;
+
     opacity: 0.5;
     background-color: ${({ backGroundColor }) => backGroundColor};
   }
 `;
 export const PartnersPageContainer = styled.div`
   display: flex;
-  gap: 24px;
-
+  justify-content: space-between;
+  padding: 24px;
   align-items: center;
   width: 100%;
   max-width: 1170px;
@@ -35,6 +33,9 @@ export const PartnersPageContainer = styled.div`
 export const TitleWrapper = styled.div``;
 
 export const IconsWrapper = styled.div`
-  display: flex;
-  gap: 96px;
+  display: inline-block;
+
+  img {
+    padding: 24px;
+  }
 `;

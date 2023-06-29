@@ -20,8 +20,8 @@ const FaqPage = () => {
           </Title>
         </TitleWrapper>
         <AccordionWrapper>
-          {FaqData.map(({ title, text }) => (
-            <FaqAccordion title={title} text={text} />
+          {FaqData.map(({ title, text }, index) => (
+            <FaqAccordion title={title} text={text} key={index} />
           ))}
         </AccordionWrapper>
       </FaqPageContainer>

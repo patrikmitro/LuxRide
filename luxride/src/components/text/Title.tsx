@@ -7,14 +7,12 @@ interface HeadingProps {
   fontWeight?: string;
   fontSize?: string;
   fontColor?: string;
-  textDecoration?: string;
 }
 
 const Title = ({
   level,
   children,
   fontColor,
-  textDecoration,
   fontSize,
   fontWeight,
 }: HeadingProps) => {

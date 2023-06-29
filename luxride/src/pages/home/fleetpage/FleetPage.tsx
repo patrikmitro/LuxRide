@@ -1,4 +1,7 @@
+// React import
 import React from "react";
+
+// Styled components imports
 import {
   FleetPageWrapper,
   FleetPageContainer,
@@ -6,21 +9,27 @@ import {
   MoreFleetContainer,
   FleetBackGround,
 } from "./FleetPage.styles";
+
+// Component imports
 import { Text } from "@/components/text/Text";
 import { Theme } from "../../../styles/theme.styles";
 import Image from "@/components/image/Image";
 import Title from "@/components/text/Title";
-import TopRightArrow from "../../../assets/images/TopRightArrow.png";
+import TopRightArrow from "@/assets/images/TopRightArrow.png";
 import { Link } from "react-router-dom";
 import FleetCard from "./fleetcard/FleetCard";
 
+// Data import
 import { FleetData } from "./fleetcard/FleetData";
+
 import SlideShow from "@/components/slideshow/SlideShow";
 
+// FleetPage component
 const FleetPage = () => {
   return (
     <FleetPageWrapper>
       <FleetPageContainer>
+        {/* Fleet title section */}
         <FleetTitleContainer>
           <Title
             level={2}
@@ -31,6 +40,7 @@ const FleetPage = () => {
             Our fleet
           </Title>
           <Link to="/fleet">
+            {/* "More Fleet" link */}
             <MoreFleetContainer>
               <Text
                 fontSize="16px"
@@ -43,9 +53,13 @@ const FleetPage = () => {
             </MoreFleetContainer>
           </Link>
         </FleetTitleContainer>
+
+        {/* Fleet slideshow */}
         <SlideShow data={FleetData.length}>
-          {FleetData.map(({ title, text, url, passengers, luggage }) => (
+          {/* Mapping through FleetData and rendering FleetCard for each item */}
+          {FleetData.map(({ title, text, url, passengers, luggage }, index) => (
             <FleetCard
+              key={index}
               title={title}
               text={text}
               url={url}
@@ -55,6 +69,8 @@ const FleetPage = () => {
           ))}
         </SlideShow>
       </FleetPageContainer>
+
+      {/* Fleet background */}
       <FleetBackGround />
     </FleetPageWrapper>
   );

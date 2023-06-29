@@ -14,6 +14,9 @@ export const FleetCardWrapper = styled.div<FleetCardProps>`
   padding: 30px;
   box-sizing: border-box;
   cursor: pointer;
+  :hover {
+    background-color: #f6f6f6;
+  }
 `;
 
 export const FleetCardContainer = styled.div`

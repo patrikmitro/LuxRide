@@ -43,8 +43,13 @@ const ServicesPage = () => {
           </Link>
         </ServicesTitleContainer>
         <SlideShow data={ServicesData.length}>
-          {ServicesData.map(({ title, subtext, url }) => (
-            <ServicesCard title={title} subText={subtext} url={url} />
+          {ServicesData.map(({ title, subtext, url }, index) => (
+            <ServicesCard
+              title={title}
+              subText={subtext}
+              url={url}
+              key={index}
+            />
           ))}
         </SlideShow>
       </ServicesPageContainer>

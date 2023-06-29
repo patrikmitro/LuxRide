@@ -58,7 +58,7 @@ const DownloadAppPage = () => {
         </ButtonWrapper>
       </DownloadAppPageContainer>
       <BackGroundImage backGroundImage={AppImage} />
-      {ContourLines.map((item) => item)}
+      {ContourLines.map((item, key) => item)}
     </DownloadAppPageWrapper>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import {
   TestimonialsPageContainer,
   TestimonialsPageWrapper,
@@ -28,9 +28,9 @@ const TestimonialsPage = () => {
           loop
           draggable={false}
         >
-          {TestimonialsData.map(({ name, text, url }) => (
+          {TestimonialsData.map(({ name, text, url }, index) => (
             <SwiperSlide>
-              <CustomerReview name={name} text={text} url={url} />
+              <CustomerReview name={name} text={text} url={url} key={index} />
             </SwiperSlide>
           ))}
         </Swiper>

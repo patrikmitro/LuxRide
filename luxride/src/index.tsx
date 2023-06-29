@@ -8,7 +8,7 @@ import Home from "./pages/home/Home";
 import NotFound from "./pages/notfound/NotFound";
 import AboutUs from "./pages/aboutus/AboutUs";
 import Contact from "./pages/contact/Contact";
-
+import Booking from "./pages/booking/Booking";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
@@ -22,6 +22,7 @@ root.render(
         <Route path="*" element={<NotFound />} />
         <Route path="about" element={<AboutUs />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="booking" element={<Booking />} />
       </Routes>
     </main>
     <Footer />
