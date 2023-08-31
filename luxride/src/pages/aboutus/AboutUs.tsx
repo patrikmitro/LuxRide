@@ -8,7 +8,6 @@ import HowItWorksPage from "../home/howitworkspage/HowItWorksPage";
 import ShowCasePage from "../home/showcasepage/ShowCasePage";
 import PartnersPage from "../home/partnerspage/PartnersPage";
 const AboutUs = () => {
-
   return (
     <>
       <HeroPages name="About Us" />
