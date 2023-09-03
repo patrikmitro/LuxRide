@@ -6,4 +6,5 @@
 
 
 
-![LuxRide gif](https://github.com/patrikmitro/LuxRide/assets/67971461/09f7a336-646a-410a-aeff-3f6df4c0b2de)
+![LuxRide gif](https://github.com/patrikmitro/LuxRide/assets/67971461/3e5d8846-6cac-4634-a17d-1ef291963d8f)
+
