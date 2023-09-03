@@ -8,7 +8,7 @@ Designed by
 
 
 
-![LuxRide gif](https://github.com/patrikmitro/LuxRide/assets/67971461/934bab31-053d-4f70-a2e3-d66d2ded27ea)
+
 
 
 
