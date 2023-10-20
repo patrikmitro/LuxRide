@@ -1,8 +1,7 @@
 # LuxRide - car rental website
 
 Designed by
-# CreativeLayers
-
+<a href="https://themeforest.net/user/creativelayers">CreativeLayers</a>
 
 
 ![Screenshot 2023-09-03 at 16 20 15](https://github.com/patrikmitro/LuxRide/assets/67971461/6a990f03-de04-4dc3-ace1-eb354a6fcd63)
