@@ -1,3 +1,3 @@
 import React, { createContext } from "react";
 
-export const Booking = createContext("ASd");
+export const Booking = createContext("");
