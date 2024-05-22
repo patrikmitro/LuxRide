@@ -4,7 +4,7 @@ interface ButtonProps {
   children: React.ReactNode;
   borderRadius: string;
   backGroundColor?: string;
-
+  type: string;
   onClick?: () => void;
 }
 
@@ -27,12 +27,14 @@ const ActionButton = ({
   backGroundColor,
   borderRadius,
   onClick,
+  type,
 }: ButtonProps) => {
   return (
     <StyledActionButton
       borderRadius={borderRadius}
       backGroundColor={backGroundColor}
       onClick={onClick}
+      type={type}
     >
       {children}
     </StyledActionButton>

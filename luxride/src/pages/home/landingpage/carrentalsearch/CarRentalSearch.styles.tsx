@@ -1,16 +1,13 @@
 import styled from "styled-components";
-
+import { Form } from "formik";
 interface Props {
   backGround?: string;
   backGroundIcon?: string;
 }
 export const SearchContainer = styled.div<Props>`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   border-radius: 100px;
   background-color: ${({ backGround }) => backGround};
-  padding: 18px 24px;
+
   @media only screen and (max-width: 990px) {
     flex-direction: column;
     gap: 8px;
@@ -25,10 +22,22 @@ export const SearchContainer = styled.div<Props>`
   }
 `;
 
-export const SearchWrapper = styled.div<Props>`
+export const StyledForm = styled(Form)<Props>`
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 24px;
   @media only screen and (max-width: 990px) {
-    margin: -30px;
     padding: 16px;
+    flex-direction: column;
+    gap: 8px;
+    background-color: transparent;
+    align-items: flex-start;
+    max-width: 500px;
+    padding: 0px;
+    button {
+      width: 100%;
+      justify-content: center;
+    }
   }
 `;
 
